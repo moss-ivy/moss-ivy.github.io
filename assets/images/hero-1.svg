@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hero1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c070e"/>
+      <stop offset="50%" stop-color="#2d0b16"/>
+      <stop offset="100%" stop-color="#140409"/>
+    </linearGradient>
+
+    <linearGradient id="roseAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e29aa7"/>
+      <stop offset="100%" stop-color="#f5ccd3"/>
+    </linearGradient>
+
+    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e29aa7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#501526" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#hero1Bg)"/>
+
+  <!-- Ambientní kruhové světlo v pozadí -->
+  <circle cx="500" cy="250" r="220" fill="url(#ambientGlow)"/>
+
+  <!-- Organické biomorphic křivky (CAD skici a fyzický objekt) -->
+  <g opacity="0.35" stroke="#e29aa7" stroke-width="1.5" fill="none">
+    <circle cx="480" cy="250" r="160"/>
+    <ellipse cx="480" cy="250" rx="190" ry="80" transform="rotate(-25 480 250)"/>
+    <ellipse cx="480" cy="250" rx="190" ry="80" transform="rotate(35 480 250)"/>
+    <ellipse cx="480" cy="250" rx="190" ry="80" transform="rotate(85 480 250)"/>
+  </g>
+
+  <!-- Skulpturální 3D model vázy v popředí -->
+  <g transform="translate(180, 20)">
+    <path d="M 240 180 C 270 240, 310 320, 330 350 C 350 365, 390 355, 410 320 C 430 280, 440 210, 420 160 C 390 140, 320 145, 270 160 Z" 
+          fill="#0d6782" opacity="0.9"/>
+    <path d="M 260 190 C 280 240, 315 315, 335 340 C 350 350, 385 340, 400 310 C 418 275, 425 215, 410 170 Z" 
+          fill="#3ad1f5" opacity="0.6"/>
+  </g>
+
+  <!-- Druhý objekt: Parametrická struktura -->
+  <g transform="translate(50, 120)">
+    <ellipse cx="260" cy="260" rx="110" ry="40" fill="#ded4c3" opacity="0.9"/>
+    <path d="M 180 260 C 190 200, 220 160, 260 160 C 300 160, 330 200, 340 260 Z" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- Elegantní textury v popředí -->
+  <text x="50" y="440" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" fill="#e29aa7" letter-spacing="2">
+    PHYSICAL HARMONY
+  </text>
+  <text x="50" y="465" font-family="'Outfit', sans-serif" font-size="12" fill="#d9bcc4" letter-spacing="4">
+    MULTIDISCIPLINARY DESIGN STUDIO
+  </text>
+</svg>

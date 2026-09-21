@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <!-- Fotografické studiové pozadí se světelným gradientem -->
+    <radialGradient id="studioLight" cx="60%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f0ebe6"/>
+      <stop offset="85%" stop-color="#cfc7be"/>
+      <stop offset="100%" stop-color="#aba093"/>
+    </radialGradient>
+
+    <!-- Olivově limetkový materiál skořepiny židle -->
+    <linearGradient id="chairLime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2ec98"/>
+      <stop offset="35%" stop-color="#c5d96a"/>
+      <stop offset="70%" stop-color="#93aa3c"/>
+      <stop offset="100%" stop-color="#647822"/>
+    </linearGradient>
+
+    <!-- Tmavší vnitřní čalounění a stíny -->
+    <linearGradient id="cushionGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#edf4bc"/>
+      <stop offset="60%" stop-color="#b8cb5e"/>
+      <stop offset="100%" stop-color="#738529"/>
+    </linearGradient>
+
+    <!-- Zrcadlový odraz na lesklé podlaze studia -->
+    <linearGradient id="floorReflection" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#93aa3c" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#738529" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="floorContactShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2d2924" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2d2924" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Pozadí studia -->
+  <rect width="400" height="480" fill="url(#studioLight)"/>
+
+  <!-- Podlaha s odrazem a kontaktní stíny -->
+  <line x1="0" y1="360" x2="400" y2="360" stroke="#bfb6aa" stroke-width="1" opacity="0.5"/>
+  <ellipse cx="230" cy="365" rx="110" ry="20" fill="url(#floorContactShadow)"/>
+  
+  <!-- Zrcadlený jemný odraz nohou židle dolů -->
+  <g transform="scale(1, -0.6) translate(0, -610)" opacity="0.25">
+    <path d="M 180 340 L 195 380 L 210 340 Z" fill="#647822"/>
+    <path d="M 270 340 L 290 380 L 305 340 Z" fill="#647822"/>
+    <path d="M 230 350 L 245 385 L 260 350 Z" fill="#647822"/>
+  </g>
+
+  <!-- Sochařské křeslo (Avant-garde high-backed lounge chair) -->
+  <g id="chair-body">
+    <!-- Zadní opěrné nohy -->
+    <path d="M 270 320 Q 295 350 310 365 Q 295 365 280 345 Z" fill="#586b1c"/>
+    <path d="M 175 320 Q 155 350 145 365 Q 160 365 185 345 Z" fill="#586b1c"/>
+
+    <!-- Hlavní organická skořepina (Vysoké opěradlo s kapucí/uchem) -->
+    <!-- Boční a zadní profil -->
+    <path d="M 160 110 
+             C 145 130, 150 170, 160 210 
+             C 170 250, 165 285, 175 330 
+             C 185 365, 195 365, 205 335 
+             C 215 300, 220 295, 235 295 
+             C 255 295, 275 300, 285 335 
+             C 295 365, 305 365, 310 330 
+             C 320 280, 315 240, 300 200 
+             C 290 170, 280 145, 255 125 
+             C 230 105, 200 95, 175 100 
+             C 165 102, 160 105, 160 110 Z" 
+          fill="url(#chairLime)" stroke="#819632" stroke-width="1.5"/>
+
+    <!-- Horní klenuté opěrné 'křídlo' / kapuce -->
+    <path d="M 160 110 
+             C 165 95, 185 85, 215 90 
+             C 245 95, 260 115, 255 135 
+             C 245 155, 215 150, 185 140 
+             C 170 135, 160 125, 160 110 Z" 
+          fill="#edf4bc" opacity="0.9"/>
+
+    <!-- Vnitřní ergonomické vyhloubení pro sezení (sedák a opěra) -->
+    <path d="M 180 145 
+             C 195 190, 190 240, 200 280 
+             C 205 295, 220 300, 240 300 
+             C 260 300, 275 290, 280 270 
+             C 285 235, 275 190, 260 150 
+             C 245 155, 205 150, 180 145 Z" 
+          fill="url(#cushionGrad)"/>
+
+    <!-- Přední nohy v biomorphic tvaru -->
+    <path d="M 200 310 Q 205 345 210 365 Q 218 365 220 335 Z" fill="#6d8024"/>
+    <path d="M 265 305 Q 275 345 285 365 Q 292 365 290 330 Z" fill="#6d8024"/>
+
+    <!-- Světelný zvýrazňující odlesk na křivce skořepiny -->
+    <path d="M 165 115 C 155 145, 162 195, 172 235" 
+          fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+    <path d="M 220 95 C 240 100, 255 115, 250 130" 
+          fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.7"/>
+  </g>
+</svg>

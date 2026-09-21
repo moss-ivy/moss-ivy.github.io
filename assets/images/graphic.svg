@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a1827"/>
+      <stop offset="100%" stop-color="#240710"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#gBg)"/>
+
+  <!-- Tiskové a knižní layouty / typografie -->
+  <g transform="translate(60, 40)">
+    <!-- Karta 1 -->
+    <rect x="0" y="30" width="140" height="180" rx="8" fill="#e29aa7" opacity="0.95" transform="rotate(-6 0 30)"/>
+    <text x="25" y="70" font-family="'Cormorant Garamond', serif" font-size="20" fill="#501526" font-weight="bold" transform="rotate(-6 0 30)">IVANA</text>
+    <line x1="25" y1="85" x2="115" y2="85" stroke="#501526" stroke-width="2" transform="rotate(-6 0 30)"/>
+    <rect x="25" y="105" width="85" height="6" rx="3" fill="#501526" opacity="0.6" transform="rotate(-6 0 30)"/>
+    <rect x="25" y="120" width="65" height="6" rx="3" fill="#501526" opacity="0.6" transform="rotate(-6 0 30)"/>
+
+    <!-- Karta 2 -->
+    <rect x="120" y="20" width="150" height="190" rx="8" fill="#9fb399" opacity="0.9" transform="rotate(8 120 20)"/>
+    <text x="145" y="65" font-family="'Cormorant Garamond', serif" font-size="18" fill="#501526" font-weight="bold" transform="rotate(8 120 20)">DESIGN</text>
+    <circle cx="215" cy="120" r="28" fill="#501526" opacity="0.15" transform="rotate(8 120 20)"/>
+  </g>
+</svg>

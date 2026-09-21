@@ -1,0 +1,988 @@
+:root {
+  /* Hlavní barevná paleta z dodaného návrhu */
+  --color-bg-wine: #501526;        /* Hluboká vínová - hlavní pozadí webu */
+  --color-card-about: #e29aa7;     /* Pudrově růžová - karta About */
+  --color-card-collab: #9fb399;    /* Šalvějově zelená - karta Collaboration */
+  --color-card-contact: #3e5b46;   /* Hluboká lesní zeleň - karta Contact */
+  --color-card-shop: rgba(255, 255, 255, 0.04); /* Jemný podklad pro Shop */
+  
+  /* Textové barvy a kontrast (vše splňuje WCAG AAA/AA) */
+  --text-on-wine: #ffffff;
+  --text-on-wine-muted: #f2d9e0;
+  --text-on-rose: #501526;
+  --text-on-rose-muted: #6b2438;
+  --text-on-sage: #501526;
+  --text-on-sage-muted: #6b2438;
+  --text-on-forest: #ffffff;
+  --text-on-forest-muted: #e6f0e8;
+
+  /* Tlačítka a akcenty */
+  --btn-pill-white-bg: #ffffff;
+  --btn-pill-white-text: #501526;
+  --btn-pill-rose-bg: #e29aa7;
+  --btn-pill-rose-text: #501526;
+  --btn-pill-forest-text: #3e5b46;
+
+  /* Typografie */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Zaoblení a vizuální prvky dle návrhu */
+  --radius-card: 28px;
+  --radius-pill: 9999px;
+  --radius-thumb: 20px;
+  
+  /* Přechody a stíny */
+  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Reset a základní nastavení */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  color-scheme: light dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-wine);
+  color: var(--text-on-wine);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Přístupnost: jasný focus outline */
+:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* Kontejner */
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER & NAVIGACE */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(80, 21, 38, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text-on-wine);
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 0.8rem;
+  color: var(--text-on-wine-muted);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-on-wine-muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-card-about);
+  border-radius: 2px;
+}
+
+/* Přepínač jazyků EN | CS */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-on-wine-muted);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.active {
+  background-color: #ffffff;
+  color: var(--color-bg-wine);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobilní tlačítko hamburger */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* FULL-WIDTH HERO BANNER */
+.hero-banner-section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #3b0f1c;
+  padding: 40px 0;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  width: 100%;
+}
+
+.hero-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 40px;
+}
+
+.hero-slide-content {
+  flex: 1;
+  max-width: 540px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(226, 154, 167, 0.2);
+  color: var(--color-card-about);
+  border: 1px solid rgba(226, 154, 167, 0.4);
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-on-wine-muted);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.hero-slide-media {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img-wrap {
+  width: 100%;
+  max-height: 440px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.hero-img-wrap img,
+.hero-img-wrap svg {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ovládací prvky slideru */
+.slider-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.slider-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.slider-btn:hover {
+  background: #ffffff;
+  color: var(--color-bg-wine);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.slider-dot.active {
+  background: var(--color-card-about);
+  width: 26px;
+  border-radius: var(--radius-pill);
+}
+
+/* 2x2 HLAVNÍ GRID SEKCE (Přesně podle dodaného mockupu) */
+.home-grid-section {
+  padding: 60px 0 80px;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  grid-template-rows: auto auto;
+  gap: 32px;
+}
+
+/* KARTA 1: SHOP (Vlevo nahoře) */
+.card-shop {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-card);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition);
+}
+
+.card-shop:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.shop-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.shop-thumb {
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  border-radius: var(--radius-thumb);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: var(--transition);
+}
+
+.shop-thumb:hover {
+  transform: scale(1.04);
+}
+
+.shop-thumb img,
+.shop-thumb svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.shop-thumb-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  font-size: 0.72rem;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.shop-thumb:hover .shop-thumb-caption {
+  opacity: 1;
+}
+
+/* KARTA 2: ABOUT (Vpravo nahoře - růžová) */
+.card-about {
+  background-color: var(--color-card-about);
+  color: var(--text-on-rose);
+  border-radius: var(--radius-card);
+  padding: 38px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition);
+}
+
+.card-about:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-about-content {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.card-title-serif {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.card-about .card-title-serif {
+  color: var(--text-on-rose);
+}
+
+.card-body-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.card-about-photo {
+  flex: 0.9;
+  max-width: 220px;
+  aspect-ratio: 1 / 1.1;
+  border-radius: var(--radius-thumb);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(80, 21, 38, 0.2);
+}
+
+.card-about-photo img,
+.card-about-photo svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* KARTA 3: COLLABORATION (Vlevo dole - šalvějová) */
+.card-collaboration {
+  background-color: var(--color-card-collab);
+  color: var(--text-on-sage);
+  border-radius: var(--radius-card);
+  padding: 38px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition);
+}
+
+.card-collaboration:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-collaboration .card-title-serif {
+  color: var(--text-on-sage);
+}
+
+.collab-bullet {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-on-sage);
+}
+
+.collab-bullet::before {
+  content: '▶';
+  font-size: 0.85rem;
+  color: var(--text-on-sage);
+}
+
+/* KARTA 4: GET IN TOUCH (Vpravo dole - lesní zeleň) */
+.card-contact {
+  background-color: var(--color-card-contact);
+  color: var(--text-on-forest);
+  border-radius: var(--radius-card);
+  padding: 38px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition);
+}
+
+.card-contact:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-contact .card-title-serif {
+  color: var(--text-on-forest);
+}
+
+.card-contact .card-body-text {
+  color: var(--text-on-forest-muted);
+}
+
+/* TLAČÍTKA - PILULKY DLE MOCKUPU */
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 13px 36px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.pill-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.pill-btn-white {
+  background-color: #ffffff;
+  color: var(--color-bg-wine);
+}
+
+.pill-btn-white:hover {
+  background-color: #f7f3f4;
+  color: #3b0f1c;
+}
+
+.pill-btn-rose {
+  background-color: var(--color-card-about);
+  color: var(--color-bg-wine);
+}
+
+.pill-btn-rose:hover {
+  background-color: #ebabb6;
+  color: #3b0f1c;
+}
+
+.pill-btn-forest-contact {
+  background-color: #ffffff;
+  color: var(--color-card-contact);
+}
+
+.pill-btn-forest-contact:hover {
+  background-color: #f3f7f4;
+  color: #2e4434;
+}
+
+/* PODSTRÁNKY - SPOLEČNÉ ROZVRŽENÍ */
+.page-hero {
+  padding: 50px 0 40px;
+  text-align: center;
+}
+
+.page-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.page-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-on-wine-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.content-card-section {
+  padding: 20px 0 80px;
+}
+
+.content-card {
+  border-radius: var(--radius-card);
+  padding: 50px 48px;
+  box-shadow: var(--shadow-subtle);
+  margin-bottom: 40px;
+}
+
+.content-card-rose {
+  background-color: var(--color-card-about);
+  color: var(--text-on-rose);
+}
+
+.content-card-sage {
+  background-color: var(--color-card-collab);
+  color: var(--text-on-sage);
+}
+
+.content-card-forest {
+  background-color: var(--color-card-contact);
+  color: var(--text-on-forest);
+}
+
+.content-card-wine-glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* FILTRY PRO PROJEKTY A SHOP */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-on-wine-muted);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #ffffff;
+  color: var(--color-bg-wine);
+  font-weight: 600;
+}
+
+/* MŘÍŽKA PRODUKTŮ A PROJEKTŮ */
+.products-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.product-card,
+.project-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.product-card:hover,
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-media-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #2b0b14;
+}
+
+.card-media-wrap img,
+.card-media-wrap svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-media-wrap img,
+.project-card:hover .card-media-wrap img,
+.product-card:hover .card-media-wrap svg,
+.project-card:hover .card-media-wrap svg {
+  transform: scale(1.05);
+}
+
+.card-details {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
+}
+
+.card-category-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-card-about);
+  font-weight: 600;
+}
+
+.card-item-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.card-item-desc {
+  font-size: 0.95rem;
+  color: var(--text-on-wine-muted);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.card-footer-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.product-price {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* FORMULÁŘ V KONTAKTU */
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: inherit;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: inherit;
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Toast notifikace */
+.toast-msg {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #ffffff;
+  color: var(--color-bg-wine);
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.toast-msg.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* FOOTER */
+.site-footer {
+  margin-top: auto;
+  background-color: #3b0f1c;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px 0 30px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-btn:hover {
+  background: #ffffff;
+  color: var(--color-bg-wine);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  font-size: 0.85rem;
+  color: var(--text-on-wine-muted);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1080px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-about {
+    flex-direction: column-reverse;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .card-about-photo {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .hero-slide {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-slide-content {
+    max-width: 100%;
+  }
+
+  .slider-nav {
+    position: static;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background-color: rgba(80, 21, 38, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .shop-thumbnails {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card-about, 
+  .card-collaboration, 
+  .card-contact, 
+  .card-shop {
+    padding: 28px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

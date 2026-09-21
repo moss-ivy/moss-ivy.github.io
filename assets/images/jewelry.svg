@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="jewelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#211016"/>
+      <stop offset="100%" stop-color="#3d1824"/>
+    </linearGradient>
+
+    <linearGradient id="silverGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#e3d6c8"/>
+      <stop offset="60%" stop-color="#b8a186"/>
+      <stop offset="100%" stop-color="#735b44"/>
+    </linearGradient>
+
+    <filter id="jewelGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#jewelBg)"/>
+
+  <!-- Podkladový jemný kruhový podnos -->
+  <circle cx="200" cy="150" r="100" fill="#14080c" opacity="0.6"/>
+
+  <!-- Organický sochařský prsten / náramek (plynulá křivka) -->
+  <path d="M 120 150 
+           C 120 100, 160 80, 200 80 
+           C 250 80, 280 110, 280 150 
+           C 280 190, 240 220, 200 220 
+           C 150 220, 120 190, 120 150 Z" 
+        fill="none" stroke="url(#silverGold)" stroke-width="18" stroke-linecap="round" filter="url(#jewelGlow)"/>
+
+  <!-- Vnitřní proplétající se organická vlna -->
+  <path d="M 140 160 
+           C 160 110, 220 120, 240 150 
+           C 260 180, 190 200, 170 160" 
+        fill="none" stroke="#fcead4" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Drahokam / surový minerál -->
+  <polygon points="195,75 208,68 215,82 202,90" fill="#3ad1f5" opacity="0.9" filter="url(#jewelGlow)"/>
+  <circle cx="202" cy="78" r="2" fill="#ffffff"/>
+</svg>

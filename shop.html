@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop &amp; Editions — Dobiasova Design</title>
+  <meta name="description" content="Shop original physical design objects, hand-blown glassware, orbital luminaries, and limited-edition items by Ivana Dobiášová.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Dobiasova Design Home">
+        <span class="brand-title">Dobiasova design</span>
+        <span class="brand-tagline" data-i18n="brand.tagline">Improving life in harmony with nature.</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="shop.html" class="nav-link active" data-i18n="nav.shop">Shop</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="collaboration.html" class="nav-link" data-i18n="nav.collab">Collaboration</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switcher" aria-label="Language Selector">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="cs">CS</button>
+      </div>
+
+      <button type="button" class="menu-toggle" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title" data-i18n="shop.page.title">Studio Shop &amp; Editions</h1>
+        <p class="page-subtitle" data-i18n="shop.page.subtitle">
+          Original physical creations, limited-edition objects, and bespoke commissions.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-card-section" aria-label="Shop Catalog">
+      <div class="container">
+
+        <!-- Filtry -->
+        <div class="filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all" data-i18n="shop.filter.all">All Objects</button>
+          <button type="button" class="filter-btn" data-filter="glass" data-i18n="shop.filter.glass">Glassware</button>
+          <button type="button" class="filter-btn" data-filter="lighting" data-i18n="shop.filter.lighting">Lighting</button>
+          <button type="button" class="filter-btn" data-filter="furniture" data-i18n="shop.filter.furniture">Seating &amp; Furniture</button>
+          <button type="button" class="filter-btn" data-filter="sculptural" data-i18n="shop.filter.sculptural">Parametric &amp; Sculptural</button>
+        </div>
+
+        <!-- Mřížka produktů -->
+        <div class="products-grid">
+
+          <!-- Produkt 1: Azurová váza -->
+          <article class="product-card" data-category="glass">
+            <div class="card-media-wrap">
+              <img src="assets/images/vase.svg" alt="Azure Ribbed Glass Vase" loading="lazy">
+            </div>
+            <div class="card-details">
+              <span class="card-category-tag">Glassware &bull; Limited Edition</span>
+              <h2 class="card-item-title">Azure Ribbed Glass Vase</h2>
+              <p class="card-item-desc">
+                Hand-blown lead-free crystal with vertical tactile fluting. Inspired by water ripples and coastal reflections.
+              </p>
+              <div class="card-footer-action">
+                <span class="product-price">€ 380</span>
+                <a href="contact.html?inquiry=vase" class="pill-btn pill-btn-rose" style="padding: 8px 20px; font-size: 0.78rem;" data-i18n="shop.inquire.btn">INQUIRE / PURCHASE</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produkt 2: Svítidlo -->
+          <article class="product-card" data-category="lighting">
+            <div class="card-media-wrap">
+              <img src="assets/images/chandelier.svg" alt="Orbital Luminary Rings" loading="lazy">
+            </div>
+            <div class="card-details">
+              <span class="card-category-tag">Lighting &bull; Made to Order</span>
+              <h2 class="card-item-title">Orbital Luminary Rings</h2>
+              <p class="card-item-desc">
+                Brushed brass concentric halos with integrated high-CRI warm LED illumination. Adjustable kinetic orientation.
+              </p>
+              <div class="card-footer-action">
+                <span class="product-price">€ 1,850</span>
+                <a href="contact.html?inquiry=chandelier" class="pill-btn pill-btn-rose" style="padding: 8px 20px; font-size: 0.78rem;" data-i18n="shop.inquire.btn">INQUIRE / PURCHASE</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produkt 3: Stojánek / Květináč -->
+          <article class="product-card" data-category="sculptural">
+            <div class="card-media-wrap">
+              <img src="assets/images/planter.svg" alt="Parametric Cellular Stand" loading="lazy">
+            </div>
+            <div class="card-details">
+              <span class="card-category-tag">Parametric &bull; Studio Edition</span>
+              <h2 class="card-item-title">Parametric Cellular Stand</h2>
+              <p class="card-item-desc">
+                Additive bio-ceramic arch with organic Voronoi pores for tillandsia and air plants. Smooth tactile satin finish.
+              </p>
+              <div class="card-footer-action">
+                <span class="product-price">€ 240</span>
+                <a href="contact.html?inquiry=planter" class="pill-btn pill-btn-rose" style="padding: 8px 20px; font-size: 0.78rem;" data-i18n="shop.inquire.btn">INQUIRE / PURCHASE</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produkt 4: Křeslo -->
+          <article class="product-card" data-category="furniture">
+            <div class="card-media-wrap">
+              <img src="assets/images/chair.svg" alt="Sculptural High-Back Lounger" loading="lazy">
+            </div>
+            <div class="card-details">
+              <span class="card-category-tag">Seating &bull; Bespoke</span>
+              <h2 class="card-item-title">Sculptural Biophilic Lounger</h2>
+              <p class="card-item-desc">
+                Avant-garde ergonomic lounge chair sculpted from sustainable polymer shell with wool felt interior upholstery.
+              </p>
+              <div class="card-footer-action">
+                <span class="product-price">Bespoke</span>
+                <a href="contact.html?inquiry=chair" class="pill-btn pill-btn-rose" style="padding: 8px 20px; font-size: 0.78rem;" data-i18n="shop.inquire.btn">INQUIRE / PURCHASE</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produkt 5: Šperk -->
+          <article class="product-card" data-category="sculptural">
+            <div class="card-media-wrap">
+              <img src="assets/images/jewelry.svg" alt="Organic Möbius Cuff" loading="lazy">
+            </div>
+            <div class="card-details">
+              <span class="card-category-tag">Jewelry &bull; Limited Run</span>
+              <h2 class="card-item-title">Organic Möbius Cuff</h2>
+              <p class="card-item-desc">
+                Solid recycled sterling silver with satin gold vermeil accents. Hand-finished continuous topological curve.
+              </p>
+              <div class="card-footer-action">
+                <span class="product-price">€ 320</span>
+                <a href="contact.html?inquiry=jewelry" class="pill-btn pill-btn-rose" style="padding: 8px 20px; font-size: 0.78rem;" data-i18n="shop.inquire.btn">INQUIRE / PURCHASE</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Zakázková tvorba karta -->
+        <article class="content-card content-card-sage" style="margin-top: 60px; text-align: center;">
+          <h2 class="card-title-serif" data-i18n="shop.custom.title" style="margin-bottom: 14px;">Looking for a custom edition?</h2>
+          <p class="card-body-text" data-i18n="shop.custom.desc" style="max-width: 650px; margin: 0 auto 28px;">
+            Most pieces can be tailored in material, finish, or dimensions to fit your residential or commercial space.
+          </p>
+          <a href="collaboration.html" class="pill-btn pill-btn-white" data-i18n="card.collab.btn">GET DETAILS</a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-title">Dobiasova design</div>
+          <div class="brand-tagline" data-i18n="brand.tagline">Improving life in harmony with nature.</div>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="contact.html" class="social-btn" aria-label="Contact">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Dobiasova Design. <span data-i18n="footer.rights">All rights reserved.</span></span>
+        <a href="#top" class="nav-link" data-i18n="footer.backToTop" style="padding: 0;">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

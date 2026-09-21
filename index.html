@@ -1,1 +1,246 @@
-Test. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Integer pellentesque quam vel velit. Proin mattis lacinia justo. Sed ac dolor sit amet purus malesuada congue. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer vulputate sem a nibh rutrum consequat. Nullam faucibus mi quis velit. Suspendisse sagittis ultrices augue. Nunc dapibus tortor vel mi dapibus sollicitudin. Praesent dapibus. Nullam rhoncus aliquam metus. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Phasellus et lorem id felis nonummy placerat. Fusce wisi. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Donec quis nibh at felis congue commodo. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dobiasova Design — Improving life in harmony with nature.</title>
+  <meta name="description" content="Official portfolio of Ivana Dobiášová — Multidisciplinary designer of physical products, industrial objects, jewelry, and biophilic spaces.">
+  
+  <!-- Google Fonts: Cormorant Garamond (Serif) & Outfit (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Dobiasova Design Home">
+        <span class="brand-title">Dobiasova design</span>
+        <span class="brand-tagline" data-i18n="brand.tagline">Improving life in harmony with nature.</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="shop.html" class="nav-link" data-i18n="nav.shop">Shop</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="collaboration.html" class="nav-link" data-i18n="nav.collab">Collaboration</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Jazykový přepínač EN | CS -->
+      <div class="lang-switcher" aria-label="Language Selector">
+        <button type="button" class="lang-btn active" data-lang="en" aria-label="Switch to English">EN</button>
+        <button type="button" class="lang-btn" data-lang="cs" aria-label="Přepnout do češtiny">CS</button>
+      </div>
+
+      <!-- Hamburger pro mobilní telefony -->
+      <button type="button" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- FULL-WIDTH HERO BANNER -->
+    <section class="hero-banner-section" aria-label="Featured Works Showcase">
+      <div class="hero-slider">
+        <div class="slider-track">
+
+          <!-- Slajd 1: Multidisciplinary Design -->
+          <article class="hero-slide">
+            <div class="hero-slide-content">
+              <span class="hero-tag" data-i18n="hero.slide1.tag">Multidisciplinary Design</span>
+              <h1 class="hero-title" data-i18n="hero.slide1.title">Improving life in harmony with nature.</h1>
+              <p class="hero-desc" data-i18n="hero.slide1.desc">
+                Physical product, industrial, and spatial design bridging sustainable organic forms with visionary material craft.
+              </p>
+              <a href="projects.html" class="pill-btn pill-btn-white" data-i18n="hero.slide1.btn">EXPLORE PROJECTS</a>
+            </div>
+            <div class="hero-slide-media">
+              <div class="hero-img-wrap">
+                <img src="assets/images/hero-1.svg" alt="Physical harmony product design showcase" width="800" height="420">
+              </div>
+            </div>
+          </article>
+
+          <!-- Slajd 2: Lighting & Glass Art -->
+          <article class="hero-slide">
+            <div class="hero-slide-content">
+              <span class="hero-tag" data-i18n="hero.slide2.tag">Lighting &amp; Glass Art</span>
+              <h2 class="hero-title" data-i18n="hero.slide2.title">Orbital luminaries &amp; sculpted glass.</h2>
+              <p class="hero-desc" data-i18n="hero.slide2.desc">
+                Kinetic celestial rings, bespoke ribbed glass vessels, and ambient architectural illumination.
+              </p>
+              <a href="shop.html" class="pill-btn pill-btn-white" data-i18n="hero.slide2.btn">DISCOVER SHOP</a>
+            </div>
+            <div class="hero-slide-media">
+              <div class="hero-img-wrap">
+                <img src="assets/images/hero-2.svg" alt="Kinetic luminary lighting installation" width="800" height="420">
+              </div>
+            </div>
+          </article>
+
+          <!-- Slajd 3: Furniture & Spatial Objects -->
+          <article class="hero-slide">
+            <div class="hero-slide-content">
+              <span class="hero-tag" data-i18n="hero.slide3.tag">Furniture &amp; Spatial Objects</span>
+              <h2 class="hero-title" data-i18n="hero.slide3.title">Avant-garde seating &amp; biophilic architecture.</h2>
+              <p class="hero-desc" data-i18n="hero.slide3.desc">
+                Sculptural loungers and parametric structures designed for sensory presence and ergonomic balance.
+              </p>
+              <a href="collaboration.html" class="pill-btn pill-btn-white" data-i18n="hero.slide3.btn">START A PROJECT</a>
+            </div>
+            <div class="hero-slide-media">
+              <div class="hero-img-wrap">
+                <img src="assets/images/hero-3.svg" alt="Biophilic furniture design" width="800" height="420">
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Slider ovládání -->
+        <div class="slider-nav">
+          <button type="button" class="slider-btn prev" aria-label="Previous slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button type="button" class="slider-btn next" aria-label="Next slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+          <div class="slider-dots">
+            <button type="button" class="slider-dot active" data-index="0" aria-label="Go to slide 1"></button>
+            <button type="button" class="slider-dot" data-index="1" aria-label="Go to slide 2"></button>
+            <button type="button" class="slider-dot" data-index="2" aria-label="Go to slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2x2 HLAVNÍ GRID SEKCE (Přesně podle dodaného mockupu) -->
+    <section class="home-grid-section" aria-label="Main Navigation Portals">
+      <div class="container">
+        <div class="home-grid">
+
+          <!-- KARTA 1: SHOP (Vlevo nahoře) -->
+          <article class="card-shop">
+            <div class="shop-thumbnails">
+              <div class="shop-thumb">
+                <img src="assets/images/vase.svg" alt="Azure Ribbed Glass Vase" width="300" height="340">
+                <span class="shop-thumb-caption" data-i18n="card.shop.thumb1">Azure Ribbed Glass Vase</span>
+              </div>
+              <div class="shop-thumb">
+                <img src="assets/images/chandelier.svg" alt="Orbital Luminary Rings" width="300" height="340">
+                <span class="shop-thumb-caption" data-i18n="card.shop.thumb2">Orbital Luminary Rings</span>
+              </div>
+              <div class="shop-thumb">
+                <img src="assets/images/planter.svg" alt="Parametric Cellular Stand" width="300" height="340">
+                <span class="shop-thumb-caption" data-i18n="card.shop.thumb3">Parametric Cellular Stand</span>
+              </div>
+            </div>
+            <a href="shop.html" class="pill-btn pill-btn-white" data-i18n="card.shop.btn">SHOP</a>
+          </article>
+
+          <!-- KARTA 2: ABOUT (Vpravo nahoře - pudrově růžová) -->
+          <article class="card-about">
+            <div class="card-about-content">
+              <h2 class="card-title-serif" data-i18n="card.about.title">About</h2>
+              <p class="card-body-text" data-i18n="card.about.text">
+                Hello!<br>
+                My name is Ivana and I am a multidisciplinary designer operating in Europe.
+              </p>
+              <a href="about.html" class="pill-btn pill-btn-white" data-i18n="card.about.btn">READ MORE</a>
+            </div>
+            <div class="card-about-photo">
+              <img src="assets/images/chair.svg" alt="Sculptural lounge chair designed by Ivana" width="300" height="340">
+            </div>
+          </article>
+
+          <!-- KARTA 3: COLLABORATION (Vlevo dole - šalvějově zelená) -->
+          <article class="card-collaboration">
+            <div>
+              <h2 class="card-title-serif" data-i18n="card.collab.title">Collaboration</h2>
+              <p class="collab-bullet" data-i18n="card.collab.text" style="margin-top: 14px;">
+                there are several ways how we can set up our collaboration
+              </p>
+            </div>
+            <a href="collaboration.html" class="pill-btn pill-btn-rose" data-i18n="card.collab.btn">GET DETAILS</a>
+          </article>
+
+          <!-- KARTA 4: GET IN TOUCH WITH ME (Vpravo dole - lesní zeleň) -->
+          <article class="card-contact">
+            <div>
+              <h2 class="card-title-serif" data-i18n="card.contact.title">Get in touch with me</h2>
+              <p class="card-body-text" data-i18n="card.contact.text" style="margin-top: 14px;">
+                Are you interested in collaboration or do you have a question?
+              </p>
+            </div>
+            <a href="contact.html" class="pill-btn pill-btn-forest-contact" data-i18n="card.contact.btn">HIT ME UP</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-title">Dobiasova design</div>
+          <div class="brand-tagline" data-i18n="brand.tagline">Improving life in harmony with nature.</div>
+        </div>
+
+        <div class="social-links" aria-label="Social Profiles">
+          <!-- Instagram -->
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <!-- E-mail -->
+          <a href="contact.html" class="social-btn" aria-label="Contact via email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Dobiasova Design. <span data-i18n="footer.rights">All rights reserved.</span></span>
+        <a href="#top" class="nav-link" data-i18n="footer.backToTop" style="padding: 0;">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SKRIPTY -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

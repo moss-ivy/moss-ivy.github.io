@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Dobiasova Design</title>
+  <meta name="description" content="Learn about Ivana Dobiášová — Multidisciplinary physical product designer, creator, and bio-inspired researcher.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Dobiasova Design Home">
+        <span class="brand-title">Dobiasova design</span>
+        <span class="brand-tagline" data-i18n="brand.tagline">Improving life in harmony with nature.</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="shop.html" class="nav-link" data-i18n="nav.shop">Shop</a></li>
+          <li><a href="about.html" class="nav-link active" data-i18n="nav.about">About</a></li>
+          <li><a href="collaboration.html" class="nav-link" data-i18n="nav.collab">Collaboration</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switcher" aria-label="Language Selector">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="cs">CS</button>
+      </div>
+
+      <button type="button" class="menu-toggle" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title" data-i18n="about.page.title">About Ivana Dobiášová</h1>
+        <p class="page-subtitle" data-i18n="about.page.subtitle">
+          Multidisciplinary designer exploring the dialogue between organic living systems, craft, and physical products.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-card-section">
+      <div class="container">
+
+        <!-- KARTA 1: Filosofie (Růžová) -->
+        <article class="content-card content-card-rose">
+          <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1.2; min-width: 300px;">
+              <h2 class="card-title-serif" data-i18n="about.story.title" style="margin-bottom: 20px;">Design Philosophy</h2>
+              <p class="card-body-text" data-i18n="about.story.p1" style="margin-bottom: 16px;">
+                My creative work is rooted in harmony with nature. Across diverse design scales—from miniature jewelry and artisanal glassware to industrial consumer products and architectural interventions—I strive to create objects that evoke emotional resonance and long-term utility.
+              </p>
+              <p class="card-body-text" data-i18n="about.story.p2">
+                I believe that physical products in our spaces should enrich everyday human rituals. By studying biomimetic patterns and combining modern digital fabrication with timeless physical materials, every piece tells an honest story.
+              </p>
+            </div>
+            <div style="flex: 0.8; min-width: 260px; text-align: center;">
+              <div style="border-radius: var(--radius-thumb); overflow: hidden; box-shadow: var(--shadow-subtle); background: #ffffff;">
+                <img src="assets/images/chair.svg" alt="Sculptural lounge chair" style="width: 100%; height: 320px; object-fit: cover;">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- KARTA 2: Disciplíny / Záběr (Šalvějová) -->
+        <article class="content-card content-card-sage">
+          <h2 class="card-title-serif" data-i18n="about.scope.title" style="margin-bottom: 30px; text-align: center;">Areas of Expertise</h2>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+            <!-- Produktový design -->
+            <div style="background: rgba(80, 21, 38, 0.08); border-radius: 20px; padding: 24px;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 8px;" data-i18n="about.scope.product">Physical &amp; Product Design</h3>
+              <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="about.scope.product.desc">Functional home goods, lighting systems, vessels, and sensory everyday objects.</p>
+            </div>
+
+            <!-- Průmyslový design -->
+            <div style="background: rgba(80, 21, 38, 0.08); border-radius: 20px; padding: 24px;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 8px;" data-i18n="about.scope.industrial">Industrial &amp; Ergonomic Design</h3>
+              <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="about.scope.industrial.desc">Production-ready engineering concepts, ergonomic furniture, and sustainable materials.</p>
+            </div>
+
+            <!-- Šperk -->
+            <div style="background: rgba(80, 21, 38, 0.08); border-radius: 20px; padding: 24px;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 8px;" data-i18n="about.scope.jewelry">Jewelry &amp; Wearable Art</h3>
+              <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="about.scope.jewelry.desc">Precious metals, organic forms, and sculptural wearable pieces.</p>
+            </div>
+
+            <!-- Grafický design -->
+            <div style="background: rgba(80, 21, 38, 0.08); border-radius: 20px; padding: 24px;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 8px;" data-i18n="about.scope.graphic">Visual &amp; Graphic Identity</h3>
+              <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="about.scope.graphic.desc">Brand typography, spatial wayfinding, tactile packaging, and portfolio curation.</p>
+            </div>
+
+            <!-- Architektura -->
+            <div style="background: rgba(80, 21, 38, 0.08); border-radius: 20px; padding: 24px;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 8px;" data-i18n="about.scope.arch">Architecture &amp; Spatial Installations</h3>
+              <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="about.scope.arch.desc">Site-specific installations, biophilic spaces, and interior object integration.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- KARTA 3: CTA / Spolupráce (Lesní zeleň) -->
+        <article class="content-card content-card-forest" style="text-align: center;">
+          <h2 class="card-title-serif" data-i18n="card.contact.title" style="margin-bottom: 16px;">Get in touch with me</h2>
+          <p class="card-body-text" data-i18n="card.contact.text" style="max-width: 600px; margin: 0 auto 30px;">
+            Are you interested in collaboration or do you have a question?
+          </p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="collaboration.html" class="pill-btn pill-btn-rose" data-i18n="card.collab.btn">GET DETAILS</a>
+            <a href="contact.html" class="pill-btn pill-btn-white" data-i18n="card.contact.btn">HIT ME UP</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-title">Dobiasova design</div>
+          <div class="brand-tagline" data-i18n="brand.tagline">Improving life in harmony with nature.</div>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="contact.html" class="social-btn" aria-label="Contact">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Dobiasova Design. <span data-i18n="footer.rights">All rights reserved.</span></span>
+        <a href="#top" class="nav-link" data-i18n="footer.backToTop" style="padding: 0;">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

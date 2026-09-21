@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <!-- Tmavomodré noční pozadí -->
+    <radialGradient id="spaceBlue" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#072242"/>
+      <stop offset="60%" stop-color="#021021"/>
+      <stop offset="100%" stop-color="#000712"/>
+    </radialGradient>
+
+    <!-- Zlatý kovový přechod pro prstence -->
+    <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4cf"/>
+      <stop offset="25%" stop-color="#eac875"/>
+      <stop offset="50%" stop-color="#b88f3a"/>
+      <stop offset="75%" stop-color="#fcedad"/>
+      <stop offset="100%" stop-color="#9a7123"/>
+    </linearGradient>
+
+    <linearGradient id="goldGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8dc"/>
+      <stop offset="35%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#8a671c"/>
+      <stop offset="100%" stop-color="#f5d77f"/>
+    </linearGradient>
+
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Pozadí -->
+  <rect width="400" height="480" fill="url(#spaceBlue)"/>
+
+  <!-- Závěsná lanka -->
+  <g stroke="#718ba8" stroke-width="1" opacity="0.4">
+    <line x1="130" y1="0" x2="150" y2="150"/>
+    <line x1="270" y1="0" x2="250" y2="150"/>
+    <line x1="200" y1="0" x2="200" y2="120"/>
+  </g>
+
+  <!-- Centrální jemná záře -->
+  <ellipse cx="200" cy="240" rx="120" ry="80" fill="#ffd77a" opacity="0.1" filter="url(#goldGlow)"/>
+
+  <!-- Orbitální prstence svítidla -->
+  <g filter="url(#goldGlow)">
+    <!-- Prstenec 1: Horizontálnější velká elipsa -->
+    <ellipse cx="200" cy="240" rx="160" ry="58" 
+             fill="none" stroke="url(#goldGrad1)" stroke-width="6.5" 
+             transform="rotate(-18 200 240)"/>
+
+    <!-- Prstenec 2: Diagonální nakloněná elipsa -->
+    <ellipse cx="200" cy="235" rx="150" ry="50" 
+             fill="none" stroke="url(#goldGrad2)" stroke-width="6" 
+             transform="rotate(32 200 235)"/>
+
+    <!-- Prstenec 3: Příčně proťatá elipsa -->
+    <ellipse cx="200" cy="245" rx="145" ry="46" 
+             fill="none" stroke="url(#goldGrad1)" stroke-width="5.5" 
+             transform="rotate(-52 200 245)"/>
+
+    <!-- Prstenec 4: Vnitřní dynamická trajektorie -->
+    <ellipse cx="202" cy="238" rx="115" ry="38" 
+             fill="none" stroke="url(#goldGrad2)" stroke-width="5" 
+             transform="rotate(68 202 238)"/>
+  </g>
+
+  <!-- Zářivé světelné body na křížení prstenců -->
+  <g fill="#ffffff">
+    <circle cx="95" cy="205" r="3.5" filter="url(#goldGlow)"/>
+    <circle cx="295" cy="275" r="4" filter="url(#goldGlow)"/>
+    <circle cx="210" cy="188" r="3" filter="url(#goldGlow)"/>
+    <circle cx="160" cy="290" r="3" filter="url(#goldGlow)"/>
+  </g>
+</svg>
